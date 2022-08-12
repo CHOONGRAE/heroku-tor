@@ -189,6 +189,8 @@ if [ -n "$TOR_CONF_FILE_URL" ]; then
     TOR_CONFIG_FILE="${TOR_CONFIG_FILE}_custom"
 fi
 
+echo "$TOR_PROXY_PORT"
+
 cat >>"${HEROKU_BUILD_DIR}/tor/bin/${TOR_COMMAND}" <<EOF
 #!/usr/bin/env bash
 echo "Writing the configuration file"
