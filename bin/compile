@@ -47,6 +47,7 @@ export_env_vars "$HEROKU_ENV_DIR"
 # Variables
 ################################################################################
 
+TOR_VERSION=0.4.6.9
 TOR_COMMAND="run_tor_proxy"
 TOR_CONFIG_FILE="${HOME}/tor/etc/tor/torrc"
 TOR_DIST_URL="https://dist.torproject.org/"
@@ -180,6 +181,7 @@ echo "$TOR_SRC_NAME" >"${HEROKU_CACHE_DIR}/tor_version.txt"
 ################################################################################
 
 echo_extra "Configuring Tor Proxy"
+echo '$TOR_CONFIG_FILE'
 
 TOR_HASHED_PASS=$("${HEROKU_BUILD_DIR}/tor/bin/tor" --hash-password "$TOR_CONTROL_PASS")
 
