@@ -183,6 +183,7 @@ echo "$TOR_SRC_NAME" >"${HEROKU_CACHE_DIR}/tor_version.txt"
 echo_extra "Configuring Tor Proxy"
 
 TOR_HASHED_PASS=$("${HEROKU_BUILD_DIR}/tor/bin/tor" --hash-password "$TOR_CONTROL_PASS")
+echo "$TOR_HASHED_PASS"
 
 if [ -n "$TOR_CONF_FILE_URL" ]; then
     wget "$TOR_CONF_FILE_URL" -O "${HEROKU_BUILD_DIR}/tor/etc/tor/torrc_custom"
