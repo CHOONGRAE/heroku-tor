@@ -69,7 +69,7 @@ if [ -z "$TOR_CONTROL_PORT" ]; then
 fi
 
 if [ -z "$TOR_CONTROL_PASS" ]; then
-    TOR_CONTROL_PASS="dnfl1605@$"
+    TOR_CONTROL_PASS="TOR_CONTOL"
 fi
 
 TOR_SIG_NAME=${TOR_SRC_NAME}.asc
